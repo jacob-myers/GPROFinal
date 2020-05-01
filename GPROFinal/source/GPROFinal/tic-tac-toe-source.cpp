@@ -1,3 +1,6 @@
+//Contributors: Jacob Myers, Justin Marko
+//File Purpose: Definitions for tic-tac-toe functions
+
 #include "GPROFinal/tic-tac-toe-source.h"
 using namespace std;
 
@@ -12,6 +15,7 @@ typedef		enum gs_tictactoe_space_state		gs_tictactoe_space_state;
 //-----------------------------------------------------------------------------
 // DEFINITIONS
 
+//Gets the state of a position in a tic tac toe board
 inline gs_tictactoe_space_state gs_tictactoe_getSpaceState(gs_tictactoe const game, gs_tictactoe_index const xpos, gs_tictactoe_index const ypos)
 {
 	if (GS_TICTACTOE_VALID(xpos, ypos))
@@ -19,6 +23,7 @@ inline gs_tictactoe_space_state gs_tictactoe_getSpaceState(gs_tictactoe const ga
 	return gs_tictactoe_space_invalid;
 }
 
+//Sets the state of a position in a tic tac toe board
 inline gs_tictactoe_space_state gs_tictactoe_setSpaceState(gs_tictactoe game, gs_tictactoe_space_state const state, gs_tictactoe_index const xpos, gs_tictactoe_index const ypos)
 {
 	if (GS_TICTACTOE_VALID(xpos, ypos))
@@ -26,6 +31,7 @@ inline gs_tictactoe_space_state gs_tictactoe_setSpaceState(gs_tictactoe game, gs
 	return gs_tictactoe_space_invalid;
 }
 
+//Resets a tic tac toe board that it's given
 inline gs_tictactoe_index gs_tictactoe_reset(gs_tictactoe game)
 {
 	gs_tictactoe_index xpos, ypos, total;
@@ -36,6 +42,7 @@ inline gs_tictactoe_index gs_tictactoe_reset(gs_tictactoe game)
 	return total;
 }
 
+//Checks if any player has won on a given board and returns that person
 gs_tictactoe_space_state gs_tictactoe_getWon(gs_tictactoe game)
 {
 	for (int i = 0; i < 3; i++) // Check row
@@ -99,6 +106,7 @@ gs_tictactoe_space_state gs_tictactoe_getWon(gs_tictactoe game)
 	return gs_tictactoe_space_invalid;
 }
 
+//Gets input from the user to place Xs and Os
 void input(gs_tictactoe_space_state player, gs_tictactoe& game)
 {
 	bool doneInput = false;
@@ -125,6 +133,7 @@ void input(gs_tictactoe_space_state player, gs_tictactoe& game)
 	}
 }
 
+//Displays the board
 void display(gs_tictactoe& game)
 {
 	for (int row = 0; row < GS_TICTACTOE_BOARD_HEIGHT; row++)
@@ -148,6 +157,7 @@ void display(gs_tictactoe& game)
 	}
 }
 
+//Launches a game instance. Called in main
 int launchTicTacToe()
 {
 	gs_tictactoe game;
