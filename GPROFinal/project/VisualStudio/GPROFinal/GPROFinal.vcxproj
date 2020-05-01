@@ -19,10 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\source\GPROFinal\some-source.cpp" />
+    <ClCompile Include="..\..\..\source\GPROFinal\input.cpp" />
+    <ClCompile Include="..\..\..\source\GPROFinal\tic-tac-toe-source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\GPROFinal\some-source.h" />
+    <ClInclude Include="..\..\..\include\GPROFinal\input.h" />
+    <ClInclude Include="..\..\..\include\GPROFinal\tic-tac-toe-source.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

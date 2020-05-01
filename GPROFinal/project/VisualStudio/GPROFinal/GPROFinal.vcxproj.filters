@@ -15,12 +15,18 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\source\GPROFinal\some-source.cpp">
+    <ClCompile Include="..\..\..\source\GPROFinal\tic-tac-toe-source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\GPROFinal\input.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\include\GPROFinal\some-source.h">
+    <ClInclude Include="..\..\..\include\GPROFinal\tic-tac-toe-source.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\GPROFinal\input.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
